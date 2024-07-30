@@ -17,7 +17,7 @@ struct MovieListScreen: View {
         MovieListView(movies: movies)
             .toolbar(content: {
             ToolbarItem(placement: .topBarTrailing) {
-                Button("Add Moview") {
+                Button("Add Movie") {
                     isAddMoviePresented = true
                 }
             }
