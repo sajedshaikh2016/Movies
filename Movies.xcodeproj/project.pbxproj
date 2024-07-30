@@ -15,6 +15,7 @@
 		B49114942C59242400A1D498 /* AddMovieScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49114932C59242400A1D498 /* AddMovieScreen.swift */; };
 		B49114972C59254A00A1D498 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49114962C59254A00A1D498 /* String+Extensions.swift */; };
 		B49114992C59295A00A1D498 /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49114982C59295A00A1D498 /* MovieListScreen.swift */; };
+		B491149C2C592F3100A1D498 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B491149B2C592F3100A1D498 /* MovieListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B49114932C59242400A1D498 /* AddMovieScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieScreen.swift; sourceTree = "<group>"; };
 		B49114962C59254A00A1D498 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		B49114982C59295A00A1D498 /* MovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListScreen.swift; sourceTree = "<group>"; };
+		B491149B2C592F3100A1D498 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		B49114802C59223D00A1D498 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				B491149A2C592F0E00A1D498 /* Views */,
 				B49114952C59252F00A1D498 /* Extensions */,
 				B49114922C5923F100A1D498 /* Screens */,
 				B491148F2C5922DE00A1D498 /* Models */,
@@ -101,6 +104,14 @@
 				B49114962C59254A00A1D498 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B491149A2C592F0E00A1D498 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B491149B2C592F3100A1D498 /* MovieListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B49114972C59254A00A1D498 /* String+Extensions.swift in Sources */,
+				B491149C2C592F3100A1D498 /* MovieListView.swift in Sources */,
 				B49114942C59242400A1D498 /* AddMovieScreen.swift in Sources */,
 				B49114992C59295A00A1D498 /* MovieListScreen.swift in Sources */,
 				B49114842C59223D00A1D498 /* ContentView.swift in Sources */,
