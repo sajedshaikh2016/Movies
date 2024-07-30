@@ -14,6 +14,7 @@
 		B49114912C5922F200A1D498 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49114902C5922F200A1D498 /* Movie.swift */; };
 		B49114942C59242400A1D498 /* AddMovieScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49114932C59242400A1D498 /* AddMovieScreen.swift */; };
 		B49114972C59254A00A1D498 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49114962C59254A00A1D498 /* String+Extensions.swift */; };
+		B49114992C59295A00A1D498 /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49114982C59295A00A1D498 /* MovieListScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B49114902C5922F200A1D498 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		B49114932C59242400A1D498 /* AddMovieScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieScreen.swift; sourceTree = "<group>"; };
 		B49114962C59254A00A1D498 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		B49114982C59295A00A1D498 /* MovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				B49114932C59242400A1D498 /* AddMovieScreen.swift */,
+				B49114982C59295A00A1D498 /* MovieListScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				B49114972C59254A00A1D498 /* String+Extensions.swift in Sources */,
 				B49114942C59242400A1D498 /* AddMovieScreen.swift in Sources */,
+				B49114992C59295A00A1D498 /* MovieListScreen.swift in Sources */,
 				B49114842C59223D00A1D498 /* ContentView.swift in Sources */,
 				B49114822C59223D00A1D498 /* MoviesApp.swift in Sources */,
 				B49114912C5922F200A1D498 /* Movie.swift in Sources */,
