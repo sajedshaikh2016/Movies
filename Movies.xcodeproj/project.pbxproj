@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B427AF812C5E19560087B1C4 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427AF802C5E19560087B1C4 /* Review.swift */; };
 		B427AF832C5E1F840087B1C4 /* AddReviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427AF822C5E1F840087B1C4 /* AddReviewScreen.swift */; };
+		B427AF852C5E2C5E0087B1C4 /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427AF842C5E2C5E0087B1C4 /* ReviewListView.swift */; };
 		B49114822C59223D00A1D498 /* MoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49114812C59223D00A1D498 /* MoviesApp.swift */; };
 		B49114842C59223D00A1D498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49114832C59223D00A1D498 /* ContentView.swift */; };
 		B49114862C59223E00A1D498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49114852C59223E00A1D498 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		B427AF802C5E19560087B1C4 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		B427AF822C5E1F840087B1C4 /* AddReviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewScreen.swift; sourceTree = "<group>"; };
+		B427AF842C5E2C5E0087B1C4 /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
 		B491147E2C59223D00A1D498 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49114812C59223D00A1D498 /* MoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesApp.swift; sourceTree = "<group>"; };
 		B49114832C59223D00A1D498 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				B491149B2C592F3100A1D498 /* MovieListView.swift */,
+				B427AF842C5E2C5E0087B1C4 /* ReviewListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				B49114972C59254A00A1D498 /* String+Extensions.swift in Sources */,
 				B491149C2C592F3100A1D498 /* MovieListView.swift in Sources */,
+				B427AF852C5E2C5E0087B1C4 /* ReviewListView.swift in Sources */,
 				B427AF812C5E19560087B1C4 /* Review.swift in Sources */,
 				B49114942C59242400A1D498 /* AddMovieScreen.swift in Sources */,
 				B49114992C59295A00A1D498 /* MovieListScreen.swift in Sources */,
