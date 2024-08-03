@@ -11,15 +11,15 @@ import SwiftData
 struct MovieListView: View {
     
     let movies: [Movie]
-    @Environment(\.modelContext) private var context
+    @Environment(\.modelContext) private var modelcontext
     
     private func deleteMovie(indexSet: IndexSet) {
         indexSet.forEach { index in
             let movie = movies[index]
-            context.delete(movie)
+            modelcontext.delete(movie)
             
             do {
-                try context.save()
+                try modelcontext.save()
             } catch {
                 print(error.localizedDescription)
             }

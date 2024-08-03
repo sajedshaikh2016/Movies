@@ -10,7 +10,7 @@ import SwiftData
 
 struct MovieDetailScreen: View {
     @Environment(\.dismiss) private var dismiss
-    @Environment(\.modelContext) private var context
+    @Environment(\.modelContext) private var modelContext
     let movie: Movie
     
     @State private var title: String = ""
@@ -26,7 +26,7 @@ struct MovieDetailScreen: View {
                 movie.year = year
                 
                 do {
-                    try context.save()
+                    try modelContext.save()
                 } catch {
                     print(error.localizedDescription)
                 }
@@ -43,7 +43,7 @@ struct MovieDetailScreen: View {
 
 struct MovieDetailContainerScreen: View {
     
-    @Environment(\.modelContext) private var context
+    @Environment(\.modelContext) private var modelContext
     @State private var movie: Movie?
     
     var body: some View {
@@ -54,7 +54,7 @@ struct MovieDetailContainerScreen: View {
         }
         .onAppear(perform: {
             movie = Movie(title: "Antman", year: 2023)
-            context.insert(movie!)
+            modelContext.insert(movie!)
         })
     }
 }

@@ -11,7 +11,7 @@ import SwiftData
 struct AddMovieScreen: View {
     
     @Environment(\.dismiss) private var dismiss
-    @Environment(\.modelContext) private var context
+    @Environment(\.modelContext) private var modelContext
     
     @State private var title: String = ""
     @State private var year: Int?
@@ -38,10 +38,10 @@ struct AddMovieScreen: View {
                     guard let year = year else { return }
                     let movie = Movie(title: title, year: year)
                     
-                    context.insert(movie)
+                    modelContext.insert(movie)
                     
                     do {
-                        try context.save()
+                        try modelContext.save()
                     } catch {
                         print(error.localizedDescription)
                     }
