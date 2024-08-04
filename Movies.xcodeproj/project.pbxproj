@@ -20,6 +20,7 @@
 		B49114992C59295A00A1D498 /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49114982C59295A00A1D498 /* MovieListScreen.swift */; };
 		B491149C2C592F3100A1D498 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B491149B2C592F3100A1D498 /* MovieListView.swift */; };
 		B491149E2C59322C00A1D498 /* MovieDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B491149D2C59322C00A1D498 /* MovieDetailScreen.swift */; };
+		B4B49F5A2C5F6AD3002F48FF /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B49F592C5F6AD3002F48FF /* Actor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B49114982C59295A00A1D498 /* MovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListScreen.swift; sourceTree = "<group>"; };
 		B491149B2C592F3100A1D498 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		B491149D2C59322C00A1D498 /* MovieDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailScreen.swift; sourceTree = "<group>"; };
+		B4B49F592C5F6AD3002F48FF /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				B49114902C5922F200A1D498 /* Movie.swift */,
 				B427AF802C5E19560087B1C4 /* Review.swift */,
+				B4B49F592C5F6AD3002F48FF /* Actor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B49F5A2C5F6AD3002F48FF /* Actor.swift in Sources */,
 				B49114972C59254A00A1D498 /* String+Extensions.swift in Sources */,
 				B491149C2C592F3100A1D498 /* MovieListView.swift in Sources */,
 				B427AF852C5E2C5E0087B1C4 /* ReviewListView.swift in Sources */,
