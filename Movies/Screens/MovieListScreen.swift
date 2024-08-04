@@ -12,7 +12,9 @@ struct MovieListScreen: View {
     
     @Environment(\.modelContext) private var modelContext
     
-    @Query(sort:\Movie.title, order: .forward) private var movies: [Movie]
+    @Query(sort: \Movie.title, order: .forward) private var movies: [Movie]
+    @Query(sort: \Actor.name, order: .forward) private var actors: [Actor]
+    
     @State private var isAddMoviePresented: Bool = false
     @State private var isActorPresented: Bool = false
     @State private var actorName: String = ""
@@ -23,27 +25,39 @@ struct MovieListScreen: View {
     }
     
     var body: some View {
-        MovieListView(movies: movies)
-            .toolbar(content: {
-                
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Add Actor") {
-                        isActorPresented = true
-                    }
-                }
-                
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("Add Movie") {
-                        isAddMoviePresented = true
-                    }
-                }
-                
+        
+        VStack(alignment: .leading, content: {
+            Text("Movies")
+                .font(.largeTitle)
+            MovieListView(movies: movies)
+            
+            Text("Actors")
+                .font(.largeTitle)
+            ActorListView(actors: actors)
         })
+        
+        .padding()
+        
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarLeading) {
+                Button("Add Actor") {
+                    isActorPresented = true
+                }
+            }
+            
+            ToolbarItem(placement: .topBarTrailing) {
+                Button("Add Movie") {
+                    isAddMoviePresented = true
+                }
+            }
+        })
+        
         .sheet(isPresented: $isAddMoviePresented, content: {
             NavigationStack {
                 AddMovieScreen()
             }
         })
+        
         .sheet(isPresented: $isActorPresented, content: {
             Text("Add Actor")
                 .font(.largeTitle)
@@ -56,6 +70,7 @@ struct MovieListScreen: View {
                 isActorPresented = false
             }
         })
+        
     }
 }
 
