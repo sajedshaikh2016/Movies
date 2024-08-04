@@ -42,7 +42,7 @@ struct MovieDetailScreen: View {
                     Image(systemName: "plus")
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 })
-                
+            
                 if let reviews = movie.reviews {
                     if reviews.isEmpty {
                         ContentUnavailableView {
@@ -52,6 +52,7 @@ struct MovieDetailScreen: View {
                         ReviewListView(reviews: reviews)
                     }
                 }
+                
             }
             
         }
