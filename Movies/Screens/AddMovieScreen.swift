@@ -42,7 +42,7 @@ struct AddMovieScreen: View {
                 Button("Save") {
                     guard let year = year else { return }
                     let movie = Movie(title: title, year: year)
-                    movie.achtors = Array(selectedActors)
+                    movie.actors = Array(selectedActors)
                     
                     selectedActors.forEach { actor in
                         actor.movies.append(movie)

@@ -17,7 +17,7 @@ final class Movie {
     var reviews: [Review] = []
     
     @Relationship(deleteRule: .noAction, inverse: \Actor.movies)
-    var achtors: [Actor] = []
+    var actors: [Actor] = []
     
     init(title: String, year: Int) {
         self.title = title
