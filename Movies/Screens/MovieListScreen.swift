@@ -27,6 +27,7 @@ struct MovieListScreen: View {
     
     @State private var actorName: String = ""
     @State private var activeSheet: Sheets?
+    @State private var filterOption: FilterOption = .none
     
     private func saveActor() {
         let actor = Actor(name: actorName)
@@ -36,8 +37,14 @@ struct MovieListScreen: View {
     var body: some View {
         
         VStack(alignment: .leading, content: {
-            Text("Movies")
-                .font(.largeTitle)
+            HStack(alignment: .firstTextBaseline, content: {
+                Text("Movies")
+                    .font(.largeTitle)
+                Spacer()
+                Button("Filter") {
+                    activeSheet = .showFilter
+                }
+            })
             MovieListView(movies: movies)
             
             Text("Actors")
@@ -80,7 +87,7 @@ struct MovieListScreen: View {
                     self.activeSheet = nil
                 }
             case .showFilter:
-                Text("Show filter screen")
+                FilterSelectionScreen(filterOption: $filterOption)
             case nil:
                 Text("")
             }
