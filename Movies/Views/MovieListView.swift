@@ -10,7 +10,22 @@ import SwiftData
 
 struct MovieListView: View {
     
-    let movies: [Movie]
+    @Query private var movies: [Movie]
+    let filterOption: FilterOption
+    
+    init(filterOption: FilterOption = .none) {
+        self.filterOption = filterOption
+        
+        switch self.filterOption {
+            case .title(let movieTitle):
+                _movies = Query(filter: #Predicate<Movie> { movie in
+                movie.title.contains(movieTitle)
+            })
+            case .none:
+                _movies = Query()
+            }
+    }
+    
     @Environment(\.modelContext) private var modelcontext
     
     private func deleteMovie(indexSet: IndexSet) {
@@ -47,6 +62,6 @@ struct MovieListView: View {
 }
 
 #Preview {
-    MovieListView(movies: [])
+    MovieListView(filterOption: .none)
         .modelContainer(for: [Movie.self])
 }
