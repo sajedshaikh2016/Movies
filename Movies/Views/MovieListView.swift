@@ -17,18 +17,21 @@ struct MovieListView: View {
         self.filterOption = filterOption
         
         switch self.filterOption {
-            case .title(let movieTitle):
-                _movies = Query(filter: #Predicate<Movie> { movie in
-                movie.title.contains(movieTitle)
-            })
-            
-            case .reviewsCount(let numberOfReviews):
-                _movies = Query(filter: #Predicate<Movie> { movie in
-                movie.reviews.count >= numberOfReviews
-            })
-            case .none:
-                _movies = Query()
-            }
+        case .title(let movieTitle):
+            _movies = Query(filter: #Predicate<Movie> { movie in
+            movie.title.contains(movieTitle)
+        })
+        case .reviewsCount(let numberOfReviews):
+            _movies = Query(filter: #Predicate<Movie> { movie in
+            movie.reviews.count >= numberOfReviews
+        })
+        case .actorsCount(let numberOfActors):
+            _movies = Query(filter: #Predicate<Movie> { movie in
+            movie.actors.count >= numberOfActors
+        })
+        case .none:
+            _movies = Query()
+        }
     }
     
     @Environment(\.modelContext) private var modelcontext
