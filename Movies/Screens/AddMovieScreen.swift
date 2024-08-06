@@ -13,17 +13,17 @@ struct AddMovieScreen: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
     
-    @State private var title: String = ""
+    @State private var name: String = ""
     @State private var year: Int?
     @State private var selectedActors: Set<Actor> = []
     
     private var isFormValid: Bool {
-        !title.isEmptyOrWhiteSpace && year != nil && !selectedActors.isEmpty
+        !name.isEmptyOrWhiteSpace && year != nil && !selectedActors.isEmpty
     }
     
     var body: some View {
         Form {
-            TextField("Title", text: $title)
+            TextField("Title", text: $name)
             TextField("Year", value: $year, format: .number)
             
             Section("Select Actors") {
@@ -41,7 +41,7 @@ struct AddMovieScreen: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Save") {
                     guard let year = year else { return }
-                    let movie = Movie(title: title, year: year)
+                    let movie = Movie(name: name, year: year)
                     movie.actors = Array(selectedActors)
                     
                     selectedActors.forEach { actor in

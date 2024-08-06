@@ -23,7 +23,7 @@ struct MovieDetailScreen: View {
             TextField("Year", value: $year, format: .number)
             Button("Update") {
                 guard let year = year else { return }
-                movie.title = title
+                movie.name = title
                 movie.year = year
                 
                 do {
@@ -67,7 +67,7 @@ struct MovieDetailScreen: View {
             
         }
         .onAppear(perform: {
-            title = movie.title
+            title = movie.name
             year = movie.year
         })
         .sheet(isPresented: $showReviewScreen, content: {
@@ -90,7 +90,7 @@ struct MovieDetailContainerScreen: View {
             }
         }
         .onAppear(perform: {
-            movie = Movie(title: "Antman", year: 2023)
+            movie = Movie(name: "Antman", year: 2023)
             modelContext.insert(movie!)
         })
     }

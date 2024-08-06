@@ -19,7 +19,7 @@ struct MovieListView: View {
         switch self.filterOption {
         case .title(let movieTitle):
             _movies = Query(filter: #Predicate<Movie> { movie in
-            movie.title.contains(movieTitle)
+            movie.name.contains(movieTitle)
         })
         case .reviewsCount(let numberOfReviews):
             _movies = Query(filter: #Predicate<Movie> { movie in
@@ -55,7 +55,7 @@ struct MovieListView: View {
                 NavigationLink(value: movie) {
                     HStack(alignment: .firstTextBaseline, content: {
                         VStack(alignment: .leading, content: {
-                            Text(movie.title)
+                            Text(movie.name)
                             Text("Number of reviews: \(movie.reviewsCount)")
                                 .font(.caption)
                             Text("Number of actors: \(movie.actorsCount)")
