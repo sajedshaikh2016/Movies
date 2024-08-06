@@ -18,10 +18,7 @@ enum MoviesMigrationPlan: SchemaMigrationPlan {
         [migrateV1toV2]
     }
     
-    static let migrateV1toV2 = MigrationStage.custom(
-        fromVersion: MoviesSchemaV1.self,
-        toVersion: MoviesSchemaV2.self,
-        willMigrate: { context in
+    static let migrateV1toV2 = MigrationStage.custom(fromVersion: MoviesSchemaV1.self, toVersion: MoviesSchemaV2.self, willMigrate: { context in
             guard let movies = try? context.fetch(FetchDescriptor<Movie>()) else { return }
             var duplicates = Set<Movie>()
             var uniqueSet = Set<String>()
