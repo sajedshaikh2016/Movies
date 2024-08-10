@@ -36,6 +36,8 @@ struct MovieListView: View {
     
     @Environment(\.modelContext) private var modelcontext
     
+    /// Delete a movie
+    /// - Parameter indexSet: location id for a movie
     private func deleteMovie(indexSet: IndexSet) {
         indexSet.forEach { index in
             let movie = movies[index]

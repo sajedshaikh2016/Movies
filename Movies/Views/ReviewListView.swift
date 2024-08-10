@@ -12,6 +12,8 @@ struct ReviewListView: View {
     let movie: Movie
     @Environment(\.modelContext) private var modelContext
     
+    /// Delete a review
+    /// - Parameter indexSet: location id for a review
     private func deleteReview(indexSet: IndexSet) {
         indexSet.forEach { index in
             let review = movie.reviews[index]
