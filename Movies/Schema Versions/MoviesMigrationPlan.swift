@@ -15,7 +15,9 @@ enum MoviesMigrationPlan: SchemaMigrationPlan {
     }
     
     static var stages: [MigrationStage] {
+        
         [migrateV1toV2, migrateV2toV3]
+        
     }
     
     static let migrateV1toV2 = MigrationStage.custom(fromVersion: MoviesSchemaV1.self, toVersion: MoviesSchemaV2.self, willMigrate: { context in
